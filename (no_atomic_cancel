@@ -1,0 +1,114 @@
+#include <iostream>
+using namespace std;
+
+int calculateTotal(int numTests, int student)
+{
+   int total = 0;
+   for (int test = 1; test <=numTests; test++)
+  {
+      double score;
+      cout << "Enter score " << test << " for ";
+      cout << " student " << student << " : ";
+      cin >> score;
+      total += score;
+  }
+  return total;
+}
+int main() {
+   int numstudents = 2;
+   int numTests = 3;
+   int total;
+   int average;
+  //Determine each student's average score
+   for(int student = 1; student <= numstudents; student++)
+   {
+      cout << "Calling by value: " << endl;
+      total = calculateTotal(numTests, student);
+      average = total/numTests;
+      cout << "The average score for student " << student;
+      cout << " is " << average ;
+   }
+ 
+}
+The inner and outer loops are called by the function in main() in the following way:
+
+The outer loop iterates over the number of students, which is stored in the variable numStudents.
+For each student, the outer loop calls the function calculateTotal(). This function takes two arguments: the number of tests and the student number.
+The function calculateTotal() uses an inner loop to iterate over the number of tests.
+For each test, the function calculateTotal() prompts the user to enter a score.
+The function calculateTotal() adds the score to the total score for the student.
+After the inner loop has finished iterating, the function calculateTotal() returns the total score for the student.
+The outer loop then uses the returned total score to calculate the average score for the student.
+The outer loop then prints the average score for the student to the console.
+The following diagram illustrates how the inner and outer loops are called by the function in main():
+
+     | main()         |
+                                                                        +----------------+
+                                                                           |
+                                                                           |
+                                                                           v
+                                                              +----------------+
+                                                              | calculateTotal() |
+                                                              +----------------+
+                                                                           |
+                                                                           |
+                                                                           v
+                                                              +--------------+
+                                                              | inner loop   |
+                                                              +--------------+
+                                                                           |
+                                                                           |
+                                                                           v
+                                                              +--------------+
+                                                              | inner loop   |
+                                                              +--------------+
+                                                                           |
+                                                                           |
+                                                                           v
+                                                              +--------------+
+                                                              | inner loop   |
+                                                              +--------------+
+                                                                           |
+                                                                           |
+                                                                           v
+                                                              +----------------+
+                                                              | calculateTotal() |
+                                                              +----------------+
+                                                                           |
+                                                                           |
+                                                                           v
+                                                              +----------------+
+                                                              | main()         |
+                                                              +----------------+
+#include <iostream>
+using namespace std;
+
+int calculatetotal(int numTests, int student)
+{
+   int total = 0;
+   for test = 1; test <=numTests; test++
+  { 
+      double score;
+      cout << "Enter score " << test << "for";
+      cout << " student " << student << " : ";
+      cin << score;
+      total += score;
+  }
+  return total;
+}
+int main() {
+  int numstudents = 2;
+  int numTests = 3;
+  int total;
+  int average;
+ //Determine each student's average score
+  for(int student = 1; student <= numstudents; student++)
+  {
+    cout << "Calling by value: " << endl;
+    total = calculateTotal(numTests, student);
+    average = total/numTests;
+    cout << The average score for student " << student;
+    cout << " is " << average << ".\n\n;
+    }
+
+}
