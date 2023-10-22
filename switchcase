@@ -1,0 +1,22 @@
+#include <iostream>
+#include <string>
+using namespace std;
+int main() {
+  int choice = 1;
+if (choice >= 1 && choice <= 3) {
+  switch(choice) {
+    case 1:
+      cout << "you chose #1" <<endl;
+      cout << " *****\n****\n###\n$$\n@" <<endl;
+      break;
+    case 2:
+      cout << "you chose #2" <<endl;
+      break;
+    case 3: 
+      cout << "you chose #3" << endl;
+      break;
+  }
+}  else {
+   cout << "invalid choice" << endl;
+}
+}
