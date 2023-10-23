@@ -1,0 +1,62 @@
+#include <iostream>
+#include <string>
+using namespace std;
+void playgame()
+{cout << "thanks for playing" << endl;
+}
+void loadgame()
+{cout << "load game" << endl;}
+void playmultiplayer()
+{cout << "more than 2 players" << endl; }
+void setData()
+{int input;
+ //declare variable called input here
+  cout << "1. play game\n";
+  cout << "2. load game\n";
+  cout << "3. play multiplayer\n";
+  cout << "4. exit \n";
+  cout << "selection: ";
+  cin >> input;
+  //TO DO: call getFunction here
+  // or call switchFunction here
+}
+void getFunction(int input)
+{
+  if(input== 1)
+    playgame();
+  else if(input == 2)
+    loadgame();
+  else if(input == 3)
+    playmultiplayer();
+  else if(input == 4)
+    cout <<"thank you for playing!\n";
+  else 
+    cout << "error, bad input, quitting\n";
+}
+void switchFunction(int input)
+{
+  switch (input)
+  {
+    case 1: //note the colon, not a semicolon
+      playgame();
+      break;
+    case 2: 
+      loadgame();
+      break;
+    case 3: 
+      playmultiplayer();
+      break;
+    case 4:
+      cout << "thank you for playing!\n";
+      break;
+    default:
+      cout << "error, bad input, quitting\n";
+      break;
+  }
+}
+int main() {
+  setData();
+  getFunction(1);
+  getFunction(2);
+  getFunction(3);
+}
