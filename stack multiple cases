@@ -1,0 +1,26 @@
+#include <iostream>
+#include <string>
+using namespace std;
+int main() {
+int myInt;
+cout << "enter an int: ";
+cin >> myInt;
+switch (myInt)
+{
+case 0:
+ cout << "pick another #" << endl;
+ break;
+case 4:
+case 6:
+case 8:
+cout << "positive even below 10" << endl;
+case 1:
+case 3:
+case 5:
+case 7:
+case 9:
+cout << "odd # below 10" << endl;
+break;
+cout << "#s < 0 or > 10" << endl;
+}
+}
