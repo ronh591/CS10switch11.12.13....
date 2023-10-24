@@ -1,0 +1,57 @@
+#include <iostream>
+#include <string>
+
+enum wind_directions_t {
+  NORTH_WIND,
+  SOUTH_WIND,
+  EAST_WIND,
+  WEST_WIND,
+  NO_WIND
+};
+
+int main() {
+  std::cout << "Please enter NORTH, SOUTH, EAST, WEST, or NONE for our wind direction";
+  std::cout << std::endl;
+
+  std::string input_wind_dir;
+  std::cin >> input_wind_dir;
+
+  wind_directions_t wind_dir;
+
+  // Convert the user input to an enumerated value
+  if (input_wind_dir == "NORTH") {
+    wind_dir = NORTH_WIND;
+  } else if (input_wind_dir == "SOUTH") {
+    wind_dir = SOUTH_WIND;
+  } else if (input_wind_dir == "EAST") {
+    wind_dir = EAST_WIND;
+  } else if (input_wind_dir == "WEST") {
+    wind_dir = WEST_WIND;
+  } else if (input_wind_dir == "NONE") {
+    wind_dir = NO_WIND;
+  } else {
+    std::cout << "That's not a valid direction!" << std::endl;
+    return 1;
+  }
+
+  // Print the wind direction
+  switch (wind_dir) {
+    case NORTH_WIND:
+      std::cout << "The wind is blowing from the north." << std::endl;
+      break;
+    case SOUTH_WIND:
+      std::cout << "The wind is blowing from the south." << std::endl;
+      break;
+    case EAST_WIND:
+      std::cout << "The wind is blowing from the east." << std::endl;
+      break;
+    case WEST_WIND:
+      std::cout << "The wind is blowing from the west." << std::endl;
+      break;
+    case NO_WIND:
+      std::cout << "There is no wind." << std::endl;
+      break;
+  }
+
+  return 0;
+}
