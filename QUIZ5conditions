@@ -1,0 +1,16 @@
+int apple = 10;
+int banana = 10;
+int carrot = 20;
+
+switch ( apple ) {
+case banana:
+    // Code
+    break;
+case carrot:
+    // Code
+    break;
+default:
+    // Code
+    break;
+}
+//what is wrong:::
