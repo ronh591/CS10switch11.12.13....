@@ -1,0 +1,24 @@
+#include <iostream>
+#include <string>
+using namespace std;
+int main()
+{
+enum Fruits{orange, guava, apple};
+Fruits myFruit;
+int i;
+cout << "enter a fruit(0-2):: ";
+cin >> i;
+switch(i)
+{
+ case orange:
+ cout << "ORANGE";
+ break;
+ case guava:
+ cout << "GUAVA";
+ break;
+ case apple:
+ cout << "APPLE";
+ break;
+ }
+}  //enum enum-type-name { enumeration list } variable-list
+// enum enum_type-name { enumeration list } variable-list
